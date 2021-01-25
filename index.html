@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flex Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="short icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            color: darkgoldenrod;
+        }
+        
+        a {
+            text-decoration: none;
+            color: cornsilk;
+        }
+        
+        .header {
+            padding: 30px;
+            text-align: center;
+            background-color: bisque;
+            color: darkgoldenrod;
+        }
+        
+        .navbar {
+            display: flex;
+            background-color: brown;
+        }
+        
+        .navbar a {
+            color: cornsilk;
+            padding: 16px 20px;
+            text-align: center;
+        }
+        
+        .navbar a:hover {
+            background-color: burlywood
+        }
+        
+        #main {
+            display: flex;
+        }
+        
+        #sidebar {
+            background-color: antiquewhite;
+            flex: 30%;
+            padding: 25px;
+            order: 1;
+        }
+        
+        #content {
+            background-color: blanchedalmond;
+            flex: 70%;
+            padding: 20px;
+        }
+        
+        .box {
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin: 10px 0;
+            color: brown;
+        }
+        
+        .img-fluid {
+            background-color: brown;
+            border-radius: 6rem;
+            width: 240px;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+        .img-fluid img {
+            border-radius: 2rem;
+            max-width: 100%;
+        }
+        
+        #footer {
+            background-color: brown;
+            color: antiquewhite;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        @media screen and (max-width:700px) {
+            #main,
+            .navbar {
+                flex-direction: column;
+            }
+            #sidebar {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to my web site</h1>
+            <p>Ceren SUSUZ</p>
+        </div>
+
+        <div class="navbar">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+
+        <div id="main">
+            <div id="sidebar">
+                <div class="box">
+                    <h2>header</h2>
+                    <div class="img-fluid"><img src="blog.jpg" alt="blog"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia quaerat iure iusto sint amet error, quisquam tempore dignissimos. Consectetur.</p>
+                <div class="img-fluid"><img src="blog1.jpg" alt="blog"></div>
+                <div class="img-fluid"><img src="blog2.jpg" alt="blog"></div>
+                <div class="img-fluid"><img src="blog3.jpg" alt="blog"></div>
+            </div>
+            <div id="content" class="clearfix">
+                <div class="box">
+                    <h2>header</h2>
+                    <div class="img-fluid"><img src="blog4.jpg" alt="blog"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia quaerat iure iusto sint amet error, quisquam tempore dignissimos. Consectetur.</p>
+                <div class="box">
+                    <h2>header</h2>
+                    <div class="img-fluid"><img src="blog5.jpg" alt="blog"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia quaerat iure iusto sint amet error, quisquam tempore dignissimos. Consectetur.</p>
+                <div class="box">
+                    <h2>header</h2>
+                    <div class="img-fluid"><img src="blog.jpg" alt="blog"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia quaerat iure iusto sint amet error, quisquam tempore dignissimos. Consectetur.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <small>
+                    Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/ceren-s-2a70841b3/" target="_blank">Ceren SUSUZ</a>
+                </small>
+        </div>
+    </footer>
+
+</body>
+
+</html>
